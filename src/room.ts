@@ -10,7 +10,7 @@ class Room {
     }
 
     async loadChats(user) {
-        this.chats = await apiFetch(`/api/v1/rooms/${this.name}/chats`, user && user.token, 'GET') || [];
+        this.chats = await apiFetch(`/api/v1/rooms/${this.name}/chats`, user && user.access_token, 'GET') || [];
         console.log('loaded - New chats', this.chats);
     }
 
@@ -24,7 +24,7 @@ class Room {
 
         console.log('New chats', this.chats);
 
-        return apiFetch(`/api/v1/rooms/${this.name}/chat`, user && user.token, 'POST', {
+        return apiFetch(`/api/v1/rooms/${this.name}/chat`, user && user.access_token, 'POST', {
             room: this.name,
             username: user.username,
             text: message

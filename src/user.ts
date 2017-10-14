@@ -17,7 +17,7 @@ const signup = (username, password) => {
 }
 
 const logout = (user) => {
-  const r = apiFetch('/api/v1/user/logout', user && user.token, 'GET');
+  const r = apiFetch('/api/v1/user/logout', user && user.access_token, 'GET');
 
   setState({
     user: null

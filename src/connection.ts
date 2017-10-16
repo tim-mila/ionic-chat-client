@@ -14,6 +14,7 @@ const connect = async () => {
 }
 
 const send = (data: string) => {
+  console.log("send::", data);
   connection.send(data);
 }
 

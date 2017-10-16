@@ -1,5 +1,5 @@
 const API_URL = 'http://localhost:4000';
-const SOCKET_URL = 'localhost:8080';
+const SOCKET_URL = 'localhost:4000';
 
 const MOCK = false;
 
@@ -70,7 +70,7 @@ const apiFetch = async (endpoint, token, method, data = null) => {
     if(token) {
         req.headers.append('Authorization', `Bearer ${token}`);
     }
-    
+
     const res = await fetch(`${API_URL}${endpoint}`, ...req);
     if(res.ok) return res.json();
     throw new Error('' + res.status);

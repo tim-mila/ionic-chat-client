@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "stable"
+install: true
+script: npm install && npm run-script build
+
+cache:
+  directories:
+    - $HOME/node_modules
+
+after_success:
+  - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+  - export REPO=timmila/ionic-chat-client
+  - export TAG=latest
+  - docker build -f Dockerfile -t $REPO:$TAG .
+  - docker push $REPO
+
+services:
+  - docker

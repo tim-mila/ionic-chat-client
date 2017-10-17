@@ -17,7 +17,5 @@
 
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
-COPY --from=0 /usr/src/app/www .
-#RUN rm -rf /etc/nginx
-#COPY ./conf /etc/nginx
+COPY ./www /usr/share/nginx/html
 EXPOSE 80 443

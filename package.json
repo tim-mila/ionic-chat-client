@@ -1,42 +1,42 @@
 {
-  "name": "@ionic/chat-hiring",
-  "private": true,
-  "version": "0.0.1",
-  "description": "Ionic Chat Hiring App",
-  "scripts": {
-    "build": "stencil build --prerender",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "deploy": "npm run build && firebase deploy",
-    "serve": "stencil-dev-server",
-    "start": "npm run dev",
-    "stencil:generate": "node ./scripts/generate.js"
-  },
-  "dependencies": {
-    "@stencil/core": "0.0.6-10",
-    "@stencil/router": "0.0.10-0",
-    "body-parser": "^1.18.2",
-    "cors": "^2.8.4",
-    "express": "^4.16.1",
-    "install": "^0.10.1",
-    "npm": "^5.4.2",
-    "websocket": "^1.0.24",
-    "ws": "^3.2.0"
-  },
-  "devDependencies": {
-    "@stencil/dev-server": "0.0.17",
-    "@stencil/utils": "latest",
-    "gh-pages": "^1.0.0",
-    "gulp": "^3.9.1",
-    "gulp-markdown": "^1.2.0",
-    "highlight.js": "^9.12.0"
-  },
-  "author": "Ionic Team",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/ionic-chat-hiring.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ionic-team/ionic-chat-hiring"
-  }
+	"name": "@ionic/chat-hiring",
+	"version": "0.0.1",
+	"description": "Ionic Chat Hiring App",
+	"bugs": {
+		"url": "https://github.com/ionic-team/ionic-chat-hiring"
+	},
+	"license": "MIT",
+	"author": "Ionic Team",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ionic-team/ionic-chat-hiring.git"
+	},
+	"scripts": {
+		"build": "stencil build",
+		"dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+		"deploy": "npm run build && firebase deploy",
+		"serve": "stencil-dev-server",
+		"start": "npm run dev",
+		"stencil:generate": "node ./scripts/generate.js"
+	},
+	"dependencies": {
+		"@stencil/core": "0.0.6-10",
+		"@stencil/router": "0.0.10-0",
+		"body-parser": "^1.18.2",
+		"cors": "^2.8.4",
+		"express": "^4.16.1",
+		"install": "^0.10.1",
+		"npm": "^5.4.2",
+		"websocket": "^1.0.24",
+		"ws": "^3.2.0"
+	},
+	"devDependencies": {
+		"@stencil/dev-server": "0.0.17",
+		"@stencil/utils": "latest",
+		"gh-pages": "^1.0.0",
+		"gulp": "^3.9.1",
+		"gulp-markdown": "^1.2.0",
+		"highlight.js": "^9.12.0"
+	},
+	"private": true
 }

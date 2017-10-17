@@ -62,6 +62,11 @@ export class SignupPage {
             <ion-button>Sign up</ion-button>
           </form>
         </ion-content>
+        <ion-footer>
+          <ion-label>
+            <stencil-route-link url="/login">Login</stencil-route-link>
+          </ion-label>
+        </ion-footer>
       </ion-page>
     )
   }

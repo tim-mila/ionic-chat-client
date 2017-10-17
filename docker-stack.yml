@@ -15,7 +15,7 @@ ionic-chat-client-nginx-gen:
   image: timmila/jwilder-docker-gen
   volumes:
     - "/var/run/docker.sock:/tmp/docker.sock:ro"
-    # - "/etc/docker-gen/templates/nginx.tmpl:ro"
+    - "/etc/docker-gen/templates:ro"
   volumes_from:
     - ionic-chat-client-nginx
   entrypoint: /usr/local/bin/docker-gen -notify-sighup nginx -watch -only-exposed -wait 5s:30s /etc/docker-gen/templates/nginx.tmpl /etc/nginx/conf.d/default.conf
@@ -39,6 +39,7 @@ ionic-chat-client:
     - "/etc/nginx/conf.d"
   environment:
     - VIRTUAL_HOST=ionic-chat.alimmit.com
+    - VIRTUAL_PORT=80
     - LETSENCRYPT_HOST=ionic-chat.alimmit.com
     - LETSENCRYPT_EMAIL=timothy.mila@gmail.com
   tags:

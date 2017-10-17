@@ -1,7 +1,7 @@
 //const API_URL = 'http://localhost:4000';
 //const SOCKET_URL = 'localhost:4000';
 const API_URL = 'https://api.ionic-chat.alimmit.com';
-const SOCKET_URL = 'api.ionic-chat.alimmitm.com';
+const SOCKET_URL = 'api.ionic-chat.alimmit.com';
 
 const MOCK = false;
 

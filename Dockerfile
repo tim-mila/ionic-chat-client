@@ -1,18 +1,23 @@
-FROM node:boron
+#FROM node:8.7.0
 
 # Create app directory
-WORKDIR /usr/src/app
+#WORKDIR /usr/src/app
 
 # Install app dependencies
 # For npm@5 or later, copy package-lock.json as well
-COPY ./package.json ./package.json
-COPY ./package-lock.json ./package.json
-COPY ./src ./src
+#COPY ./package.json ./package.json
+#COPY ./package-lock.json ./package-lock.json
+#COPY ./stencil.config.js ./stencil.config.js
+#COPY ./tsconfig.json ./tsconfig.json
+#COPY ./tslint.json ./tslint.json
+#COPY ./src ./src
 
-RUN npm install
-RUN npm run-script build
+#RUN npm install
+#RUN npm run build
 
 FROM nginx:latest
-RUN rm -rf /etc/nginx
-COPY ./conf /etc/nginx
+WORKDIR /usr/share/nginx/html
+COPY --from=0 /usr/src/app/www .
+#RUN rm -rf /etc/nginx
+#COPY ./conf /etc/nginx
 EXPOSE 80 443

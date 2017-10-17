@@ -18,4 +18,4 @@
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
 COPY ./www /usr/share/nginx/html
-EXPOSE 80 443
+EXPOSE 80

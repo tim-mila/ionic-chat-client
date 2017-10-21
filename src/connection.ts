@@ -4,7 +4,8 @@ let listener = (_) => {}
 
 let connection = null;
 const connect = async () => {
-  connection = new WebSocket(`ws://${SOCKET_URL}/chat`, ['protocolOne', 'protocolTwo']);
+  //connection = new WebSocket(`ws://${SOCKET_URL}/chat`, ['protocolOne', 'protocolTwo']);
+  connection = new WebSocket(`wss://${SOCKET_URL}/chat`, ['protocolOne', 'protocolTwo']);
   connection.addEventListener('error', (err) => {
     console.error('Socket error', err);
   })

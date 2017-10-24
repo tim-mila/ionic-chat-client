@@ -1,5 +1,7 @@
 # Ionic Interviews - Chat Client
 
+[![Build Status](https://travis-ci.org/tim-mila/ionic-chat-client.svg?branch=master)](https://travis-ci.org/tim-mila/ionic-chat-client)
+
 This is a simple chat client that needs a backend.
 
 You should implement a simple API as described below, storing `users`, `rooms`, and `chats`.
